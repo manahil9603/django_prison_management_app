@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{%block title%} VIsitor {%endblock title%}
+
+{%block body%}
+<div class="container py-4">
+    <img src="/static/v.jfif"
+        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 my-2" width="400" height="600" alt="...">
+</div>
+<h1 style="color:Red; font-size:200%; text-align:center;">
+    ______VISITOR______
+    </h1>
+<div class="container">
+    <form method='post' action="/visitor">
+    {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    Visitor ID
+                </td>
+                <td>
+                    <input type="text" placeholder="ID" name='id' id='id' style="font-size:20px;"required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Visitor Name:
+                </td>
+                <td>
+                    <input type="text" placeholder="Name" name='name' id='name' style="font-size:20px;"required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    <input type="text" placeholder="Gender" name='gender' id='gender' style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <input type="text" placeholder="Address" name='address' id='address' style="font-size:20px;">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-outline-success"
+                        style="font-size:20px; align=center;">Submit</button>
+                        <button type="reset" class="btn btn-outline-success" 
+                style="font-size:20px; align=center;">Reset</button>
+                </td>
+                
+            </tr>
+            
+
+        </table>
+    </form>
+
+</div>
+{%endblock body%}

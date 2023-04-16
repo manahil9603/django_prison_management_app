@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{%block title%} SHO {%endblock title%}
+
+{%block body%} <div class="container mb-4 py-4">
+    <img src="https://source.unsplash.com/random/?police"
+        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 my-2" width="600" height="500" alt="...">
+</div>
+<h1 style="color:Red; font-size:200%; text-align:center;">
+    ______SHO______
+    </h1>
+<div class="container">
+    <form method='post' action="/sho">
+        {%csrf_token%}
+        <table>
+            
+            <tr>
+                <td>
+                    Superviser Name:
+                </td>
+                <td>
+                    <input type="text" placeholder="Name" name="id" style="font-size:20px;"required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                         Password:<br>
+                </td>
+                <td>
+                    <input type="password" placeholder="Password" name="password" style="font-size:20px;"required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Country/State:
+                </td>
+                <td>
+                    <input type="text" placeholder="Country" name="state" style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    <input type="text"placeholder="Gender" name="gender" style="font-size:20px;">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-outline-success" 						style="font-size:20px; align=center;">Submit</button>
+                    <button type="reset" class="btn btn-outline-success" 
+                style="font-size:20px; align=center;">Reset</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>    
+    
+{%endblock body%}

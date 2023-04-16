@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{%block title%} Prisoner {%endblock title%}
+
+{%block body%}
+<div class="container mb-2 py-4">
+    <img src="/static/2.jfif"
+        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 my-2" width="600" height="500" alt="...">
+</div>
+<h1 style="color:Red; font-size:200%; text-align:center;">
+    ______PRISONER______
+    </h1>
+<div class="container">
+    <form method='post' action="/prisoner">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td>
+                    Prisoner ID
+                </td>
+                <td>
+                    <input type="text" placeholder="ID" name='id' id='id' style="font-size:20px;"required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Prisoner Name:
+                </td>
+                <td>
+                    <input type="text" placeholder="Name" name = 'name' id='name' style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enterance Date:<br>
+                </td>
+                <td>
+                    <input type="date" name= 'edate' id='edate' style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Release Date:
+                </td>
+                <td>
+                    <input type="date" name='rdate' id='rdate' style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Security Level:
+                </td>
+                <td>
+                    <input type="text" placeholder="level" name = 'seclvl'  style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cell Sharing:
+                </td>
+                <td>
+                    <input type="text" placeholder="yes/no" name = 'cellsharing'  style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Current Date:
+                </td>
+                <td>
+                    <input type="date" name='curdate' id='curdate' style="font-size:20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-outline-success" 						style="font-size:20px; align=center;">Submit</button>
+                    <button type="reset" class="btn btn-outline-success" 						style="font-size:20px; align=center;">Reset</button>
+                    
+                </td>
+            </tr>
+
+        </table>
+    </form>
+{%endblock body%}
